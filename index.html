@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Projects Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #FFFFE0;
+        }
+        h1 {
+            color: #333;
+            position: relative;
+            top: -40px;
+            font-size: 24px;
+        }
+        p {
+            margin-top: -10px;
+            font-size: 16px;
+        }
+
+        /* Search Bar */
+        #searchBar {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to visit My 📂 Files</h1>
+<p>Click on the buttons below to download the image in png</p>
+
+<!-- Search Bar -->
+<input type="text" id="searchBar" placeholder="Search projects..." onkeyup="searchProjects()">
+
+<div class="btn-container" id="projectList">
+       <button class="btn" onclick="window.open('https://vedprakash3.github.io/Game_-Projects/', '_blank')">📂 Games</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Image-Tools.github.io/', '_blank')">📂 Image Tools</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Text-Tools.github.io/', '_blank')">📂 Text Tools</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Learn_-English/', '_blank')">📂 Learn English</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Jyotish_Website.io/', '_blank')">📂 Jyotish</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Troubleshooting_Guide.io/', '_blank')">📂 Troubleshooting Guide 🔧</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Visiting-Card.io/', '_blank')">📂 Visiting Cards</button>
+         <button class="btn" onclick="window.open('https://vedprakash3.github.io/Invitation_Cards.io/', '_blank')">📂 Invitation Cards</button>
+
+</div>
+<script>
+    function searchProjects() {
+        let input = document.getElementById("searchBar").value.toLowerCase();
+        let buttons = document.getElementById("projectList").getElementsByTagName("button");
+
+        for (let i = 0; i < buttons.length; i++) {
+            let text = buttons[i].innerText.toLowerCase();
+            if (text.includes(input)) {
+                buttons[i].style.display = "block";
+            } else {
+                buttons[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
